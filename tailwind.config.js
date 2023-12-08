@@ -7,8 +7,11 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero': "url('https://wallpaperset.com/w/full/f/6/c/211453.jpg')",
+        'hero': "url('https://wallpapers.com/images/hd/purple-gaming-nepi2tnxp6g0mvz9.jpg')"
       },
+      colors: {
+        'transparent': 'transparent',
+      }
       }
     },
   plugins: [],

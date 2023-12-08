@@ -72,7 +72,11 @@ app.post('/login', async (req, res) => {
         else if (result.rows[0][3] !== password) {
             return res.status(401).send({ message: 'Invalid Credentials' });
         }
-        res.status(200).send({ message: 'Login Successful' });
+        const userid = result.rows[0][0];
+        const username = result.rows[0][1];
+        const useremail = result.rows[0][2];
+        const user = { userid, username, useremail };
+        res.status(200).send({ message: 'Login Successful', user });
     }
     catch (err) {
         console.error(err);

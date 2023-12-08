@@ -4,18 +4,10 @@
 
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'NunitoSans', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
   /* hide scrollbar */
   scrollbar-width: none;
@@ -27,3 +19,22 @@
 }
 
 /* Path: src/index.css */
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'NunitoSans';
+  src: url('./assets/fonts/NunitoSans/NunitoSansRegular.ttf')
+}
+
+@font-face {
+  font-family: 'NunitoSans-SemiBold';
+  src: url('./assets/fonts/NunitoSans/NunitoSansSemiBold.ttf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NunitoSans-Bold';
+  src: url('./assets/fonts/NunitoSans/NunitoSansBold.ttf');
+  font-weight: bold;
+}
+
