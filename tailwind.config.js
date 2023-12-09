@@ -11,7 +11,12 @@ export default {
       },
       colors: {
         'transparent': 'transparent',
-      }
+      },
+      fontFamily: {
+        'nunito': ['NunitoSans', 'sans-serif'],
+        'nunito-semibold': ['NunitoSans-SemiBold', 'sans-serif'],
+        'nunito-bold': ['NunitoSans-Bold', 'sans-serif'],
+      },
       }
     },
   plugins: [],

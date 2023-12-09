@@ -12,6 +12,12 @@
   /* hide scrollbar */
   scrollbar-width: none;
   -ms-overflow-style: none;
+
+  /* disable text selection*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -23,13 +29,14 @@
 /* Custom Fonts */
 @font-face {
   font-family: 'NunitoSans';
-  src: url('./assets/fonts/NunitoSans/NunitoSansRegular.ttf')
+  src: url('./assets/fonts/NunitoSans/NunitoSansRegular.ttf');
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'NunitoSans-SemiBold';
   src: url('./assets/fonts/NunitoSans/NunitoSansSemiBold.ttf');
-  font-style: italic;
+  font-style: normal;
 }
 
 @font-face {
