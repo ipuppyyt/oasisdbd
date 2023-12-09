@@ -15,7 +15,7 @@ const Tournament = () => {
             window.location.href = "/login"
         }
 
-        axios.get(`http://localhost:3000/api/team/getall`)
+        axios.get(`/api/team/getall`)
             .then((res) => {
                 if (res.status === 200) {
                     setTeamData(res.data.teams)
@@ -28,7 +28,7 @@ const Tournament = () => {
 
     const onTournamentSubmit = (data) => {
         console.log(data)
-        axios.post("http://localhost:3000/api/tournament/register", data)
+        axios.post("/api/tournament/register", data)
             .then((res) => {
                 if (res.data.message === 'Tournament Registered' && res.status === 200) {
                     toast.success("Tournament Registered")

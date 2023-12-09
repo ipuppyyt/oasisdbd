@@ -20,7 +20,7 @@ const Signup = () => {
 
     const onLoginSubmit = (data) => {
         if(data.password === data.reenterpassword){
-            axios.post("http://localhost:3000/api/auth/register", data)
+            axios.post("/api/auth/register", data)
             .then((res) => {
                 if (res.data.message === 'Account Created' && res.status === 200) {
                     localStorage.setItem("isAuth", true)

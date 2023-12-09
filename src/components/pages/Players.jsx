@@ -16,7 +16,7 @@ const Players = () => {
             window.location.href = "/login"
         }
 
-        axios.get(`http://localhost:3000/api/team/getall`)
+        axios.get(`/api/team/getall`)
             .then((res) => {
                 if (res.status === 200) {
                     setTeamData(res.data.teams)
@@ -30,7 +30,7 @@ const Players = () => {
 
 
     const onPlayerSubmit = (data) => {
-        axios.post("http://localhost:3000/api/player/create", data)
+        axios.post("/api/player/create", data)
             .then((res) => {
                 if (res.data.message === 'Player Created' && res.status === 200) {
                     toast.success("Player Created")

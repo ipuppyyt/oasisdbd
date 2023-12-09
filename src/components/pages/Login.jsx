@@ -18,7 +18,7 @@ const Login = () => {
     }, [])
 
     const onLoginSubmit = (data) => {
-        axios.post("http://localhost:3000/api/auth/login", data)
+        axios.post("/api/auth/login", data)
             .then((res) => {
                 if (res.status === 200) {
                     localStorage.setItem("isAuth", true)

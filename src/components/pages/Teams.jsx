@@ -21,7 +21,7 @@ const Teams = () => {
     const userid = localStorage.getItem("userid");
 
     const onTeamSubmit = (data) => {
-        axios.post("http://localhost:3000/api/team/create", data)
+        axios.post("/api/team/create", data)
             .then((res) => {
                 if (res.data.message === 'Team Created' && res.status === 200) {
                     toast.success("Team Created")

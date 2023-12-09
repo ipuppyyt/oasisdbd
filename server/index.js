@@ -8,6 +8,8 @@ const colors = require('colors');
 const app = new express();
 // eslint-disable-next-line no-undef
 const oracledb = require('oracledb');
+// eslint-disable-next-line no-undef
+const path = require('path');
 
 // Oracle DB Thin Driver Configuration
 oracledb.initOracleClient({ libDir: '' });
@@ -22,10 +24,14 @@ const dbConfig = {
 
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.json({ limit: '50mb' }));
-app.use(cors())
+app.use(cors());
+// eslint-disable-next-line no-undef
+app.use(express.static(path.join(__dirname, '/dist'))); // For deployment
 
 app.get('/', (req, res) => {
     res.send('Server is UP and Running');
+    // eslint-disable-next-line no-undef
+    res.sendFile(path.join(__dirname, '/dist/index.html')); // For deployment
 });
 
 
